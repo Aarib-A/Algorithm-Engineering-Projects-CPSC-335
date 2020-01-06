@@ -1,0 +1,78 @@
+sorted_disks sort_left_to_right(const disk_state& before) {
+ 
+	sorted_disks BLIN = before
+
+	for (i = 0; i < n/2; i++){
+		for ( size_t j = 0; j < n - 1; j++) {
+			if (BLIN.index_of_disks[j] == DISK_DARK && BLIN.index_of_disks[j+1] == DISK_LIGHT){
+				//DISCLAIMER: This just the idea, not syntactically correct.
+				BLIN.swap(index_of_disks[j],index_of_disks[j+1]) 
+				BLIN.swap_counter++
+			}
+		}
+	}
+  return BLIN object's sorted disks
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sorted_disks sort_lawnmower(const disk_state& before) {
+
+	sorted_disks BLIN = before
+	Left_index_limit = 0
+	Right_index_limit = n - 2;
+	j = 0; //used to traverse BLIN's disk vector
+	reverse = false;
+
+	for (i = 0; i < n/2; i++){
+		while(1) {
+			if (Left_index_limit == Righet_index_limit) {
+				BLIN.swap(index_of_disks[Left_index_limit],index_of_disks[Right_index_limit])
+				BLIN.swap_counter++
+				break
+			}else if (!reverse) {
+				if (BLIN.index_of_disks[j] == DISK_DARK && BLIN.index_of_disks[j+1] == DISK_LIGHT) {
+					BLIN.swap(index_of_disks[Left_index_limit],index_of_disks[Right_index_limit])
+					BLIN.swap_counter++
+				}
+
+				if (j == Right_index_limit) {
+
+					Right_index_limit--
+					Left_index_limit++
+					reverse = true
+					j--
+					break
+				}
+				j++
+			}else {
+				if (BLIN.index_of_disks[j] == DISK_DARK && BLIN.index_of_disks[j+1] == DISK_LIGHT) {
+					BLIN.swap(index_of_disks[Left_index_limit],index_of_disks[Right_index_limit])
+					BLIN.swap_counter++
+				}
+				if (j == LI) {
+					Right_index_limit--
+					Left_index_limit++
+					reverse = false
+					j++
+					break
+				}
+				j--
+			}
+		}
+	}
+	
+	return BLIN object's sorted disks
+}

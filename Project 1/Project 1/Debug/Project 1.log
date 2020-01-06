@@ -1,0 +1,5 @@
+﻿  disks_test.cpp
+c:\users\md\dropbox (csu fullerton)\2018 fall\cpsc 335 - algorithm engineering\project\project 1\disks.hpp(102): warning C4018: '<': signed/unsigned mismatch
+c:\users\md\dropbox (csu fullerton)\2018 fall\cpsc 335 - algorithm engineering\project\project 1\disks.hpp(125): warning C4018: '<': signed/unsigned mismatch
+c:\users\md\dropbox (csu fullerton)\2018 fall\cpsc 335 - algorithm engineering\project\project 1\disks.hpp(128): warning C4018: '<': signed/unsigned mismatch
+  Project 1.vcxproj -> C:\Users\MD\Dropbox (CSU Fullerton)\2018 FALL\CPSC 335 - Algorithm Engineering\Project\Project 1\Debug\Project 1.exe
